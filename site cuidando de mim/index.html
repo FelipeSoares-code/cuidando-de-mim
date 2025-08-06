@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidando de Mim - Página Inicial</title>
+    <!-- fontes externas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- fim fontes externas -->
+
+    <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" href="imagens/logo-site.png">
+</head>
+<body>
+    <!-- <div id="cabecalho" style="padding: 9px;"><br></div> -->
+    <div id="cabecalho" class="">
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <div class="navbar-brand" style="padding-bottom: 0; align-items: center; display: flex;">
+                <a href="#"><img src="imagens/logo-site.png" alt="" width="60px" style="margin-top: 0;"></a>
+                <span class="texto-logo">Clínica Cuidando de Mim</span>
+            </div>
+            
+
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#barraNavegacao">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="barraNavegacao">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contato" class="nav-link">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#localizacao" class="nav-link">Localizacao</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- slides de fotos -->
+    <div id="carrossel-fotos" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carrossel-fotos" data-slide-to="0" class="active"></li>
+            <li data-target="#carrossel-fotos" data-slide-to="2"></li>
+            <li data-target="#carrossel-fotos" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-block w-100 background-carrossel" style="background-image: url('imagens/predio.jpeg');">
+                    <img class="img-carrossel" src="imagens/predio.jpeg" alt="" height="100%">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-block w-100 background-carrossel" style="background-image: url('imagens/foto-clinica1.jpeg');">
+                    <img class="img-carrossel" src="imagens/foto-clinica5.jpeg" alt="" height="100%">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-block w-100 background-carrossel" style="background-image: url('imagens/foto-recpcao.jpeg')">
+                    <img class="img-carrossel" src="imagens/foto-recpcao.jpeg" alt="" height="100%">
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carrossel-fotos" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carrossel-fotos" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="bloco-conteudo clearfix">
+        <p class="mensagem">Atendimento Online e Presencial!</p>
+    </div>
+
+    <div id="conteudo" class="container">
+        <div class="bloco-conteudo clearfix">
+            <h1>Sobre a Clínica Cuidando de Mim</h1>
+            <p class="texto-esquerda text-justify">A clínica Cuidando de Mim é um espaço dedicado ao bem-estar emocional e saúde mental, fundado pela psicóloga Rita Soares. Minha missão é oferecer suporte psicológico de forma acolhedora e personalizada, ajudando cada pessoa a encontrar saúde mental e autoconhecimento. Cuidar de si é o primeiro passo para uma vida mais plena, significativa e feliz. Venha, vamos caminhar juntos nessa jornada de cuidado e transformação!</p>
+        </div>
+        <hr>
+        <div class="bloco-conteudo clearfix">
+            <img class="img-esquerda img-fluid" src="imagens/foto-clinica4.jpeg" alt="clinica">
+            <div>
+                <h1>Como cuidar de você?</h1>
+                <p class="text-justify">Utilizo a Terapia Cognitiva Comportamental (TCC) para ajudar você a conhecer, compreender e modificar padrões de pensamentos, sentimentos e comportamentos que podem ser a causa de sofrimentos. Atendo pessoas a partir de 14 anos, oferecendo um espaço seguro e acolhedor para explorar desafios emocionais, melhorar a autoestima e desenvolver estratégias práticas para lidar com transtornos e dificuldades do dia a dia. Juntos, vamos construir um caminho de autoconhecimento, crescimento pessoal e promoção a saúde.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="bloco-conteudo">
+            <h1 style="text-align: center;">Sobre mim</h1>   
+            <div style="margin-top: 50px;" class="clearfix">
+                <img class="img-direita img-rita" src="imagens/foto-rita-2.1.jpg" alt="foto Rita">
+                <h2>Rita Soares</h2>
+
+                <div class="text-justify">
+                    <p>Sou Rita Soares, psicóloga clínica formada pela Universidade Metodista de São Paulo (UMESP), com especialização em Neuropsicologia e Gestão Empresarial. Desde 2016, atendo adolescentes, adultos e idosos, tanto no Brasil quanto no exterior, utilizando a Terapia Cognitiva Comportamental (TCC).</p>
+                    <p>Procuro integrar minha formação em Gestão Empresarial para auxiliar empreendedores e pacientes com problemas relacionados ao trabalho e ao ambiente corporativo, ajudando-os a lidar com o estresse, a ansiedade e as pressões do mercado.</p>
+                    
+                    <p>Tenho ampla experiência no tratamento de Ansiedade, Depressão, Luto e Traumas. Atendimento a adolescentes que enfrentam dificuldades de interação social, como timidez e problemas decorrentes de bullying, oferecendo suporte para melhorar a autoestima, habilidades sociais e auto conhecimento. Acompanhamento psicológico a pacientes Bariátricos pré e pós operatórios.</p>
+                    
+                    <p>Meu trabalho é voltado para a reestruturação cognitiva, gerenciamento de emoções e a ressignificação de pensamentos disfuncionais, sempre com o objetivo de promover mudanças positivas nos padrões de comportamento e na qualidade de vida dos meus pacientes. Estou sempre em busca de novos conhecimentos e técnicas para ajudar cada pessoa a alcançar sua melhor versão.</p>
+                    
+                    <p>Estou à disposição para entrar nesse processo terapêutico e, juntos, buscar as melhores soluções para seus desafios emocionais e psicológicos.</p>
+                </div>
+                    
+            </div>
+        </div>
+        <hr>
+        <div class="bloco-conteudo clearfix">
+            <h1 style="text-align: center;">Avaliações</h1>
+            
+            <div>
+                <p class="avaliacao texto-esquerda">"A Rita é uma profissional excelente, muito competente, observadora, paciente, empática, atenciosa e com ótima comunicação. Em cada sessão ela promove um ambiente acolhedor, leve, franco, aberto e de muita confiança. Esses são fatores que eu considero primordiais em uma terapia. É uma profissional que eu recomendo com certeza."<br>
+                </p>
+                <a href="https://www.doctoralia.com.br/rita-soares/psicologo/sao-bernardo-do-campo" class="link-padrao "> - Patricia avaliou com 5 estrelas no dia 22 de junho de 2023</a>
+
+                <hr class="hr-avaliacao">
+
+                <p class="avaliacao texto-direita">
+                    "Rita é simplesmente maravilhosa!
+                    Empática e respeitosa. <br> Respeita seu tempo e faz apontamentos sempre buscando enxergar os pontos em relação ao seu comportamento. Tem me ajudado muito e agradeço imensamente"
+                </p>
+                <a href="https://www.doctoralia.com.br/rita-soares/psicologo/sao-bernardo-do-campo" class="texto-direita link-padrao">
+                    - Iris Reis avaliou com 5 estrelas no dia 15 de agosto de 2023
+                </a>
+
+                <hr class="hr-avaliacao">
+
+                <p class="avaliacao texto-esquerda">
+                    "A Rita é ótima. Objetiva e dinâmica. Interpreta rapidamente o cenário, dando um parecer muito válido. Desde da primeira sessão, gostei muito dela. Recomendo"
+                </p>
+                <a class="texto-esquerda link-padrao" href="https://www.doctoralia.com.br/rita-soares/psicologo/sao-bernardo-do-campo">
+                    - Lilian avaliou com 5 estrelas no dia 24 de novembro de 2023
+                </a>
+
+                <p style="margin-top: 40px;">Veja essas e mais avaliações no site <a href="https://www.doctoralia.com.br/rita-soares/psicologo/sao-bernardo-do-campo">doctoralia.com.br</a></p>
+                
+
+            </div>
+        </div>
+    </div>
+
+    <div id="localizacao">
+        <h2 class="titulo-topico">Localização</h2>
+
+        <p style="margin-top: 20px;">
+            <img src="imagens/localizacao-icon.png" alt="icone de localização" height="32px">
+            Rua José Versolato 111B, sala 704, Centro, São Bernardo do Campo
+        </p>
+
+            <div style="text-align: center;">
+                <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8689.571016136331!2d-46.55178338423708!3d-23.69331208615029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce42366628df3b%3A0x56c02829d83e5e5!2sR.%20Jos%C3%A9%20Versolato%2C%20111B%20-%20Centro%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009750-730!5e0!3m2!1spt-BR!2sbr!4v1721414612534!5m2!1spt-BR!2sbr" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+    </div>
+
+    <div id="contato">
+        <h2 class="titulo-topico">Contato</h2>
+        <br>
+
+        <div class="containerContato">
+            <img src="imagens/logo-whatsapp.png" alt="whatsapp logo" class="imagem-logo">
+            <a class="info-contato" href="https://wa.me/5511957084554">
+                (11) 95708-4554
+            </a>
+        </div>
+        <br>
+
+        <div class="containerContato">
+            <img src="imagens/logo-email.png" alt="email logo" class="imagem-logo">
+            <a class="info-contato" href="mailto:rita.soares_psico@hotmail.com">
+                rita.soares_psico@hotmail.com
+            </a>
+        </div>
+        <br>
+
+        <div class="containerContato">
+            <img src="imagens/logo-instagram.png" alt="logo instagram" class="imagem-logo">
+            <a class="info-contato" href="https://www.instagram.com/psicologa.rita.soares/">
+                @psicologa.rita.soares
+            </a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+
+<footer>
+    Todos direitos reservados
+</footer>
+</html>
