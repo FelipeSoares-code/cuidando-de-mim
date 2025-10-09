@@ -1,7 +1,7 @@
 import clinica4 from '../assets/imagens/foto-clinica4.jpeg';
 import rita from '../assets/imagens/foto-rita-2.1.jpg';
 import Card from './card';
-import { GraduationCap, Brain } from 'lucide-react';
+import { GraduationCap, Brain, Sparkles, User } from 'lucide-react';
 
 const About = () => {
   return (
@@ -61,68 +61,50 @@ const About = () => {
           Sobre mim
         </h1>
         
-        <div className="flex flex-col md:flex-row items-start gap-6">
-          <div className="w-full md:w-3/5 order-2 md:order-1">
-            <h2 className="text-2xl font-oswald font-bold mb-6">Rita Soares</h2>
+        <div className="flex flex-col md:flex-row items-stretch gap-6">
+          {/* Cards */}
+          <div className="w-full md:w-3/5 flex flex-col justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
+              <Card 
+                titulo={'Formação Acadêmica'}
+                icone={<GraduationCap className="w-16 h-16 mx-auto mb-4 text-gray-800" />}
+                descricao={
+                  'Graduada em Psicologia pela Universidade Metodista de São Paulo (UMESP), com especialização em Neuropsicologia e Gestão Empresarial.'
+                }
+              />
 
-            <Card 
-              titulo={'Formação Acadêmica'}
-              icone={<GraduationCap className="w-16 h-16 mx-auto mb-4 text-gray-800" />}
-              descricao={
-                'Graduada em Psicologia pela Universidade Metodista de São Paulo (UMESP), com especialização em Neuropsicologia e Gestão Empresarial.'
-              }
-            />
+              <Card 
+                titulo={'Abordagem Terapêutica'}
+                icone={<Brain className="w-16 h-16 mx-auto mb-4 text-gray-800" />}
+                descricao={
+                  'Utiliza a Terapia Cognitiva Comportamental (TCC) para ajudar pacientes a reestruturarem pensamentos e comportamentos disfuncionais.'
+                }
+              />
 
-            <Card 
-              titulo={'Abordagem Terapêutica'}
-              icone={<Brain className="w-16 h-16 mx-auto mb-4 text-gray-800" />}
-              descricao={
-                'Utilizo a Terapia Cognitiva Comportamental (TCC) para ajudar pacientes a reestruturarem pensamentos e comportamentos disfuncionais.'
-              }
-            />
-            
-            <div className="space-y-4 text-lg text-justify leading-relaxed">
-              <p>
-                Sou Rita Soares, psicóloga clínica formada pela Universidade Metodista de São Paulo (UMESP), 
-                com especialização em Neuropsicologia e Gestão Empresarial. Desde 2016, atendo adolescentes, 
-                adultos e idosos, tanto no Brasil quanto no exterior, utilizando a Terapia Cognitiva 
-                Comportamental (TCC).
-              </p>
-              
-              <p>
-                Procuro integrar minha formação em Gestão Empresarial para auxiliar empreendedores e 
-                pacientes com problemas relacionados ao trabalho e ao ambiente corporativo, ajudando-os 
-                a lidar com o estresse, a ansiedade e as pressões do mercado.
-              </p>
-              
-              <p>
-                Tenho ampla experiência no tratamento de Ansiedade, Depressão, Luto e Traumas. 
-                Atendimento a adolescentes que enfrentam dificuldades de interação social, como timidez 
-                e problemas decorrentes de bullying, oferecendo suporte para melhorar a autoestima, 
-                habilidades sociais e auto conhecimento. Acompanhamento psicológico a pacientes 
-                Bariátricos pré e pós operatórios.
-              </p>
-              
-              <p>
-                Meu trabalho é voltado para a reestruturação cognitiva, gerenciamento de emoções e a 
-                ressignificação de pensamentos disfuncionais, sempre com o objetivo de promover mudanças 
-                positivas nos padrões de comportamento e na qualidade de vida dos meus pacientes. Estou 
-                sempre em busca de novos conhecimentos e técnicas para ajudar cada pessoa a alcançar sua 
-                melhor versão.
-              </p>
-              
-              <p>
-                Estou à disposição para entrar nesse processo terapêutico e, juntos, buscar as melhores 
-                soluções para seus desafios emocionais e psicológicos.
-              </p>
+              <Card 
+                titulo={'Experiência Profissional'}
+                icone={<Sparkles className="w-16 h-16 mx-auto mb-4 text-gray-800" />}
+                descricao={
+                  'Atendimento a adolescentes, adultos e idosos desde 2016, tanto no Brasil quanto no exterior, com foco em ansiedade, depressão, luto, traumas e suporte a pacientes bariátricos.'
+                }
+              />
+
+              <Card 
+                titulo={'Forma de Atendimento'}
+                icone={<User className="w-16 h-16 mx-auto mb-4 text-gray-800" />}
+                descricao={
+                  'Oferece atendimentos online e presenciais, proporcionando flexibilidade e acessibilidade para seus pacientes.'
+                }
+              />        
             </div>
           </div>
           
-          <div className="w-full md:w-2/5 order-1 md:order-2">
+          {/* Foto */}
+          <div className="w-full md:w-2/5 flex items-center justify-center">
             <img 
               src={rita} 
               alt="Rita Soares - Psicóloga" 
-              className="w-full rounded-lg shadow-lg md:mt-20"
+              className="w-full rounded-lg shadow-lg md:mt-0"
             />
           </div>
         </div>
