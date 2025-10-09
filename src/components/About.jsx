@@ -1,5 +1,7 @@
 import clinica4 from '../assets/imagens/foto-clinica4.jpeg';
 import rita from '../assets/imagens/foto-rita-2.1.jpg';
+import Card from './card';
+import { GraduationCap, Brain } from 'lucide-react';
 
 const About = () => {
   return (
@@ -62,6 +64,22 @@ const About = () => {
         <div className="flex flex-col md:flex-row items-start gap-6">
           <div className="w-full md:w-3/5 order-2 md:order-1">
             <h2 className="text-2xl font-oswald font-bold mb-6">Rita Soares</h2>
+
+            <Card 
+              titulo={'Formação Acadêmica'}
+              icone={<GraduationCap className="w-16 h-16 mx-auto mb-4 text-gray-800" />}
+              descricao={
+                'Graduada em Psicologia pela Universidade Metodista de São Paulo (UMESP), com especialização em Neuropsicologia e Gestão Empresarial.'
+              }
+            />
+
+            <Card 
+              titulo={'Abordagem Terapêutica'}
+              icone={<Brain className="w-16 h-16 mx-auto mb-4 text-gray-800" />}
+              descricao={
+                'Utilizo a Terapia Cognitiva Comportamental (TCC) para ajudar pacientes a reestruturarem pensamentos e comportamentos disfuncionais.'
+              }
+            />
             
             <div className="space-y-4 text-lg text-justify leading-relaxed">
               <p>
