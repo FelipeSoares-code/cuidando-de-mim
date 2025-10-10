@@ -1,9 +1,10 @@
-import { Phone, Mail, Instagram } from 'lucide-react';
+import { Mail } from 'lucide-react'
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
   const contactItems = [
     {
-      icon: Phone,
+      icon: FaWhatsapp,
       text: '(11) 95708-4554',
       href: 'https://wa.me/5511957084554',
       label: 'WhatsApp'
@@ -15,7 +16,7 @@ const Contact = () => {
       label: 'Email'
     },
     {
-      icon: Instagram,
+      icon: FaInstagram,
       text: '@psicologa.rita.soares',
       href: 'https://www.instagram.com/psicologa.rita.soares/',
       label: 'Instagram'

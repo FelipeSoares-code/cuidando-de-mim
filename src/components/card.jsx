@@ -1,7 +1,7 @@
 
 
 export default function Card({ titulo, descricao, icone }) {
-    const cardStyle = { fontFamily: "'Inter', Arial, Helvetica, sans-serif" };
+    const cardStyle = { fontFamily: "'Inter', Arial, Helvetica, sans-serif" }
     return (
         <div className={`w-full bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center`} style={cardStyle}>
             {icone}

@@ -4,8 +4,10 @@ import Card from './card';
 import { GraduationCap, Brain, Sparkles, User } from 'lucide-react';
 
 const About = () => {
+  const aboutStyle = { fontFamily: "'Inter', Arial, Helvetica, sans-serif" }
+
   return (
-    <div className="container mx-auto px-4 md:px-8 mt-24 font-serif">
+    <div className="container mx-auto px-4 md:px-8 mt-24 font-serif" style={aboutStyle}>
       {/* Mensagem de destaque */}
       <div className="text-center mb-16">
         <p className="text-2xl md:text-3xl font-oswald text-[#6666a8] font-normal">
