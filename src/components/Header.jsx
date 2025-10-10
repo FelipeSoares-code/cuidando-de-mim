@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-[#2c6e9a] sticky top-0 z-50 px-4 md:px-8">
+    <header className="bg-[var(--color-azul-padrao)] sticky top-0 z-50 px-4 md:px-8">
       <nav className="flex items-center justify-between py-3">
         {/* Logo e Nome */}
         <div className="flex items-center">

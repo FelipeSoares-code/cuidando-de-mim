@@ -1,6 +1,6 @@
 import clinica4 from '../assets/imagens/foto-clinica4.jpeg';
 import rita from '../assets/imagens/foto-rita-2.1.jpg';
-import Card from './card';
+import Card from './ui/card';
 import { GraduationCap, Brain, Sparkles, User } from 'lucide-react';
 
 const About = () => {
@@ -10,7 +10,7 @@ const About = () => {
     <div className="container mx-auto px-4 md:px-8 mt-24 font-serif" style={aboutStyle}>
       {/* Mensagem de destaque */}
       <div className="text-center mb-16">
-        <p className="text-2xl md:text-3xl font-oswald text-[#6666a8] font-normal">
+        <p className="text-2xl md:text-3xl font-oswald text-[var(--color-azul-padrao)] font-normal">
           Atendimento Online e Presencial!
         </p>
       </div>
