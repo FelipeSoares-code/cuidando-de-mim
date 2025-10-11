@@ -1,10 +1,10 @@
 
-export default function Card({ titulo, descricao, icone, borda }) {
+export default function Card({ titulo, descricao, icone, estilo }) {
 
     const cardStyle = { fontFamily: "'Inter', Arial, Helvetica, sans-serif" }
 
-    borda = (borda === true) ? { border: '2px solid var(--color-azul-padrao' } : {}
-    Object.assign(cardStyle, borda)
+    estilo = (estilo != null) ? estilo : {}
+    Object.assign(cardStyle, estilo)
 
     return (
         <div className={`w-full bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center`} style={cardStyle}>

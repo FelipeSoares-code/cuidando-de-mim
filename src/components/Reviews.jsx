@@ -1,8 +1,29 @@
 import { Star } from 'lucide-react';
 import Card from './ui/card';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/bundle';
+import { Navigation, Pagination, A11y } from 'swiper/modules';
 
 const Reviews = () => {
   const reviews = [
+    {
+      text: "Rita é uma profissional incrível! Acolhedora, humanizada, sábia e muito competente. Tem me ajudado muito no meu processo terapêutico. Obrigada pelo profissionalismo e pela escuta acolhedora. Recomendo demais!",
+      author: "Caroline R",
+      date: "28 de agosto de 2025"
+    },
+    {
+      text: "Estou muito satisfeita com o atendimento da Dra. Ela me acolheu com empatia e profissionalismo, criando um espaço seguro e acolhedor. Suas orientações e insights têm sido fundamentais na minha jornada. Recomendo a todos que buscam apoio psicológico!",
+      author: "Gabriela Alves",
+      date: "5 de dezembro de 2024"
+    },
+    {
+      text: "O que dizer da Rita! Excelente profissional, empática e acolhedora. Me ajudou a entender o sofrimento que eu estava enfrentando, a me conhecer, me entender, e lidar com minhas dificuldades. Cheguei até a Rita por indicação e indico ela para todos que buscam por ajuda psicológica seria e ética.",
+      author: "Rafaella W.",
+      date: "28 de março de 2024"
+    },
     {
       text: "A Rita é uma profissional excelente, muito competente, observadora, paciente, empática, atenciosa e com ótima comunicação. Em cada sessão ela promove um ambiente acolhedor, leve, franco, aberto e de muita confiança. Esses são fatores que eu considero primordiais em uma terapia. É uma profissional que eu recomendo com certeza.",
       author: "Patricia",
@@ -35,22 +56,58 @@ const Reviews = () => {
       <h1 className="text-4xl md:text-5xl font-dancing-script font-bold text-center mb-16">
         Avaliações
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <div className="collapse h-0 lg:h-full lg:visible grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {reviews.map((review, index) => (
           <Card 
             key={index}
             titulo={review.author}
             descricao={
-              <div className="flex flex-col h-full justify-between">
+              <span className="flex flex-col h-full justify-between">
                 <span key="text" className="block text-justify">{review.text}</span>
                 <span key="date" className="block mt-2 text-sm text-gray-500 text-right self-end">{review.date}</span>
-              </div>
+              </span>
             }
             icone={<StarRating />}
-            borda={true}
+            estilo={{ border: '2px solid var(--color-azul-padrao)' }}
           />
         ))}
       </div>
+
+      <Swiper className='lg:collapse h-full lg:h-0 m-[3px]'
+        spaceBetween={25} 
+        slidesPerView={1} 
+        loop={true}
+        pagination={{ clickable: true }}
+        modules={[Navigation, Pagination, A11y]}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            slidesPerView: 2
+          }
+        }}  
+      >
+        {reviews.map((review, index) => (
+          <SwiperSlide key={index}>
+            <Card
+              className="h-full"
+              titulo={review.author}
+              descricao={
+                <span className="flex flex-col h-full justify-between">
+                  <span key="text" className="block text-justify">{review.text}</span>
+                  <span key="date" className="block mt-2 text-sm text-gray-500 text-right self-end">{review.date}</span>
+                </span>
+              }
+              icone={<StarRating />}
+              estilo={{ border: '2px solid var(--color-azul-padrao)', height: '400px' }}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
       
       <p className="mt-12 text-center text-lg">
         Veja essas e mais avaliações no site{' '}
