@@ -1,4 +1,4 @@
-import { Star } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import Card from './ui/card';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -57,24 +57,7 @@ const Reviews = () => {
         Avaliações
       </h1>
 
-      <div className="collapse h-0 lg:h-full lg:visible grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {reviews.map((review, index) => (
-          <Card 
-            key={index}
-            titulo={review.author}
-            descricao={
-              <span className="flex flex-col h-full justify-between">
-                <span key="text" className="block text-justify">{review.text}</span>
-                <span key="date" className="block mt-2 text-sm text-gray-500 text-right self-end">{review.date}</span>
-              </span>
-            }
-            icone={<StarRating />}
-            estilo={{ border: '2px solid var(--color-azul-padrao)' }}
-          />
-        ))}
-      </div>
-
-      <Swiper className='lg:collapse h-full lg:h-0 m-[3px]'
+      <Swiper className='h-full m-[3px]'
         spaceBetween={25} 
         slidesPerView={1} 
         loop={true}
@@ -86,8 +69,10 @@ const Reviews = () => {
         }}
         breakpoints={{
           640: {
-            slidesPerView: 2,
-            slidesPerView: 2
+            slidesPerView: 2 //tela média
+          },
+          1024: {
+            slidesPerView: 3 //tela grande
           }
         }}  
       >
@@ -107,6 +92,13 @@ const Reviews = () => {
             />
           </SwiperSlide>
         ))}
+        {/* Botões de navegação */}
+        <div className="swiper-button-prev collapse md:visible absolute left-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-white/80 hover:bg-white p-2 rounded-full shadow-md">
+          <ChevronLeft />
+        </div>
+        <div className="swiper-button-next collapse md:visible absolute right-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-white/80 hover:bg-white p-2 rounded-full shadow-md">
+          <ChevronRight />
+        </div>
       </Swiper>
       
       <p className="mt-12 text-center text-lg">
