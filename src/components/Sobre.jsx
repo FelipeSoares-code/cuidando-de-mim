@@ -7,7 +7,7 @@ const About = () => {
   const aboutStyle = { fontFamily: "'Inter', Arial, Helvetica, sans-serif" }
 
   return (
-    <div className="container mx-auto px-4 mt-24 font-serif" style={aboutStyle}>
+    <section id='Sobre' className="container mx-auto px-4 mt-24 font-serif" style={aboutStyle}>
       {/* Mensagem de destaque */}
       <div className="text-center mb-16">
         <p className="text-2xl md:text-3xl font-oswald text-[var(--color-azul-padrao)] font-normal">
@@ -21,7 +21,7 @@ const About = () => {
           Sobre a Clínica Cuidando de Mim
         </h1>
         <p className="text-lg text-justify leading-relaxed max-w-none lg:mr-[40%]">
-          A clínica Cuidando de Mim é um espaço dedicado ao bem-estar emocional e saúde mental, 
+          A Clínica Cuidando de Mim é um espaço dedicado ao bem-estar emocional e saúde mental, 
           fundado pela psicóloga Rita Soares. Minha missão é oferecer suporte psicológico de forma 
           acolhedora e personalizada, ajudando cada pessoa a encontrar saúde mental e autoconhecimento. 
           Cuidar de si é o primeiro passo para uma vida mais plena, significativa e feliz. Venha, 
@@ -111,7 +111,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

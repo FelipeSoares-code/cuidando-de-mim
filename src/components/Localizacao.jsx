@@ -2,9 +2,9 @@ import { MapPin } from 'lucide-react';
 
 const Location = () => {
   return (
-    <div id="localizacao" className="bg-gray-100 py-12 px-4 md:px-8">
+    <section id="localizacao" className="bg-gray-100 py-12 px-4 md:px-8">
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#6666b1] mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-azul-padrao)] mb-8">
           Localização
         </h2>
         
@@ -28,7 +28,7 @@ const Location = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

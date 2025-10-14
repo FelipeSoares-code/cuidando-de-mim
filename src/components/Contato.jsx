@@ -24,7 +24,7 @@ const Contact = () => {
   ];
 
   return (
-    <div id="contato" className="bg-gray-200 py-12 px-4 md:px-8">
+    <section id="contato" className="bg-gray-200 py-12 px-4 md:px-8">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-[#6666b1] mb-8">
           Contato
@@ -35,7 +35,9 @@ const Contact = () => {
             const IconComponent = item.icon;
             return (
               <div key={index} className="flex items-center">
-                <IconComponent className="w-8 h-8 text-[#6666b1] mr-4" />
+                <a href={item.href} target='_blank' rel='noopener'>
+                  <IconComponent className="w-8 h-8 text-[#6666b1] mr-4" />
+                </a>
                 <a
                   href={item.href}
                   target="_blank"
@@ -50,7 +52,7 @@ const Contact = () => {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

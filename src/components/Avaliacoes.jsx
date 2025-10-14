@@ -50,7 +50,7 @@ const Reviews = () => {
   );
 
   return (
-    <div className="container mx-auto px-4 md:px-8 mb-16">
+    <section id="avaliações" className="container mx-auto px-4 md:px-8 mb-16">
       <hr className="border-gray-300 mb-16" />
       
       <h1 className="text-4xl md:text-5xl font-dancing-script font-bold text-center mb-16">
@@ -112,7 +112,7 @@ const Reviews = () => {
           doctoralia.com.br
         </a>
       </p>
-    </div>
+    </section>
   );
 };
 

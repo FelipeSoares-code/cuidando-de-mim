@@ -1,11 +1,10 @@
 import './App.css'
-import Header from './components/Header'
-import Carousel from './components/Carousel'
-import About from './components/About'
-import Reviews from './components/Reviews'
-import Location from './components/Location'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import Header from './components/Cabecalho'
+import Principal from './telas/Principal'
+import Cadastro from './telas/Cadastro'
+import Erro404 from './telas/Erro404'
+import Footer from './components/Rodape'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 
 function App() {
   return (
@@ -13,14 +12,13 @@ function App() {
       <Header />
       
       <main>
-        <section id="inicio">
-          <Carousel />
-        </section>
-        
-        <About />
-        <Reviews />
-        <Location />
-        <Contact />
+        <Router>
+          <Routes>
+            <Route path='/' element={<Principal />} />
+            <Route path='*' element={<Erro404 />} />
+            <Route path='/cadastro' element={<Cadastro />} />
+          </Routes>
+        </Router>
       </main>
       
       <Footer />
