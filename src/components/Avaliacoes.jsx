@@ -1,5 +1,5 @@
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
-import Card from './ui/card';
+import Card from './ui/Card';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';

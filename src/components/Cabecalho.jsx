@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import logoSite from '../assets/imagens/logo-site.png';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,14 +23,14 @@ const Header = () => {
       <nav className="flex items-center justify-between py-3">
         {/* Logo e Nome */}
         <div className="flex items-center">
-          <img 
-            src={logoSite} 
-            alt="Logo Cuidando de Mim" 
-            className="w-12 h-12 md:w-15 md:h-15"
-          />
-          <span className="ml-3 text-[#bcc3cd] text-2xl md:text-4xl font-bold font-dancing-script">
-            Clínica Cuidando de Mim
-          </span>
+            <img 
+              src={logoSite} 
+              alt="Logo Cuidando de Mim" 
+              className="w-12 h-12 md:w-15 md:h-15"
+            />
+            <span className="ml-3 text-[#bcc3cd] text-2xl md:text-4xl font-bold font-dancing-script">
+              Clínica Cuidando de Mim
+            </span>
         </div>
 
         {/* Menu Desktop */}

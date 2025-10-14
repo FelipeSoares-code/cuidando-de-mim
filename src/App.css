@@ -44,6 +44,12 @@
 
 body {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
+
+  input  {
+    border: var(--color-azul-padrao) solid 1px;
+    border-radius: 7px;
+    background-color: white;
+  }
 }
 
 :root {

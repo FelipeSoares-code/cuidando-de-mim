@@ -1,6 +1,6 @@
 import clinica4 from '../assets/imagens/foto-clinica4.jpeg';
 import rita from '../assets/imagens/foto-rita-2.1.jpg';
-import Card from './ui/card';
+import Card from './ui/Card';
 import { GraduationCap, Brain, Sparkles, User } from 'lucide-react';
 
 const About = () => {
