@@ -1,16 +1,16 @@
 import './App.css'
-import Header from './components/Cabecalho'
+import Cabecalho from './components/Cabecalho'
 import Principal from './telas/Principal'
 import Cadastro from './telas/Cadastro'
 import Erro404 from './telas/Erro404'
-import Footer from './components/Rodape'
+import Rodape from './components/Rodape'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import Login from './telas/Login'
 
 function App() {
   return (
     <div className="min-h-screen">
-      <Header />
+      <Cabecalho />
       
       <main className="min-h-screen">
         <Router>
@@ -23,7 +23,7 @@ function App() {
         </Router>
       </main>
       
-      <Footer />
+      <Rodape />
     </div>
   )
 }

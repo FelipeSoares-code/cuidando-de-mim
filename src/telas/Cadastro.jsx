@@ -1,5 +1,5 @@
 import Botao from "@/components/ui/Botao"
-import { Eye, EyeClosed, EyeOff } from "lucide-react"
+import { Eye, EyeOff } from "lucide-react"
 import { useState } from "react";
 
 export default function Cadastro(){
@@ -8,9 +8,6 @@ export default function Cadastro(){
 
     const [mostrarSenha, setMostrarSenha] = useState(false);
 
-    function verSenha(ocultar) {
-        setMostrarSenha(!ocultar);
-    }
     return (
         <form id="cadastro" className="bg-blue-50 m-auto mt-15 mb-15 w-3/4 flex flex-col gap-8 p-6 md:p-14 rounded-xl justify-center items-center">
             <h1 className="text-[30px] font-bold m-auto">Cadastro</h1>
@@ -36,11 +33,13 @@ export default function Cadastro(){
                     className={estiloInput}
                 />
 
-                {mostrarSenha ? (
-                    <Eye id="verSenha" className="w-30" onClick={() => verSenha(false)} />
-                ) : (
-                    <EyeOff id="ocultarSenha" className="w-30" onClick={() => verSenha(true)} />
-                )}
+                <button type="button" className="w-30" onClick={() => setMostrarSenha(!mostrarSenha)}>
+                    {mostrarSenha ? (
+                        <Eye />
+                    ) : (
+                        <EyeOff />
+                    )}
+                </button>
                 
             </div>
             

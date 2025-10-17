@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import logoSite from '../assets/imagens/logo-site.png';
-import { Link } from 'react-router-dom';
+import { useState } from 'react'
+import { Menu, X, CircleUserRound } from 'lucide-react'
+import logoSite from '../assets/imagens/logo-site.png'
+import { Link } from 'react-router-dom'
 
-const Header = () => {
+export default function Cabecalho() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -11,6 +11,12 @@ const Header = () => {
   };
 
   const scrollToSection = (sectionId) => {
+    const path = window.location.pathname
+    if (path !== '/') {
+      // veriicar se na produção a tela desse até o id
+      window.location.href = `/#${sectionId}`
+      return
+    }
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -22,7 +28,7 @@ const Header = () => {
     <header className="bg-[var(--color-azul-padrao)] sticky top-0 z-50 px-4 md:px-8">
       <nav className="flex items-center justify-between py-3">
         {/* Logo e Nome */}
-        <div className="flex items-center">
+      <a href="/" className="flex items-center">
             <img 
               src={logoSite} 
               alt="Logo Cuidando de Mim" 
@@ -31,7 +37,7 @@ const Header = () => {
             <span className="ml-3 text-[#bcc3cd] text-2xl md:text-4xl font-bold font-dancing-script">
               Clínica Cuidando de Mim
             </span>
-        </div>
+        </a>
 
         {/* Menu Desktop */}
         <ul className="hidden md:flex space-x-8">
@@ -58,6 +64,11 @@ const Header = () => {
             >
               Localização
             </button>
+          </li>
+          <li>
+            <CircleUserRound
+              className='text-white hover:text-[#bcc3cd] transition-colors duration-200'
+            />
           </li>
         </ul>
 
@@ -102,7 +113,5 @@ const Header = () => {
         </div>
       )}
     </header>
-  );
-};
-
-export default Header;
+  )
+}
