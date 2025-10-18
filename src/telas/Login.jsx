@@ -13,9 +13,12 @@ export default function Login() {
             <h1 className="text-[30px] font-bold m-auto">Login</h1>
 
             <input id="email" type="text" placeholder="E-mail" className={estiloInput} />
-            <div className={'w-[90%] lg:w-full flex flex-row items-center justify-center gap-5'}>
-            <input type={mostrarSenha ? "text" : "password"} placeholder="Senha" className={`${estiloInput} ml-17`} />
-                <button type="button" className="w-12" onClick={() => setMostarSenha(!mostrarSenha)}>
+
+            <div className={'w-[90%] lg:w-full flex flex-col lg:flex-row items-center justify-center gap-5'}>
+                <input type={mostrarSenha ? "text" : "password"} placeholder="Senha" className={`${estiloInput} lg:ml-17 w-full`} />
+                <button type="button" className="w-12 flex flex-col justify-center items-center" 
+                    onClick={() => setMostarSenha(!mostrarSenha)}
+                >
                     {mostrarSenha ? (
                         <Eye />
                     ) : (

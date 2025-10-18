@@ -86,6 +86,11 @@ export default function Cabecalho() {
         <div className="md:hidden bg-[#2c6e9a] pb-4">
           <ul className="space-y-2">
             <li>
+              <CircleUserRound
+                className='text-white ml-4 hover:text-[#bcc3cd] transition-colors duration-200'
+              />
+            </li>
+            <li>
               <button 
                 onClick={() => scrollToSection('inicio')}
                 className="block w-full text-left px-4 py-2 text-white hover:bg-[#1e4a66] transition-colors duration-200"

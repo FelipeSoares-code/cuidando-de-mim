@@ -33,7 +33,9 @@ export default function Cadastro(){
                     className={estiloInput}
                 />
 
-                <button type="button" className="w-30" onClick={() => setMostrarSenha(!mostrarSenha)}>
+                <button type="button" className="w-30 flex flex-col justify-center items-center" 
+                    onClick={() => setMostrarSenha(!mostrarSenha)}
+                >
                     {mostrarSenha ? (
                         <Eye />
                     ) : (
