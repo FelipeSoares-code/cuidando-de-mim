@@ -5,7 +5,7 @@ import AreaControle from './AreaControle'
 
 export default function Cabecalho() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isControlOpen, setisControlOpen] = useState(false)
+  const [isControlOpen, setIsControlOpen] = useState(false)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -70,7 +70,7 @@ export default function Cabecalho() {
             <li>
               <CircleUserRound
                 className='text-white hover:text-[#bcc3cd] transition-colors duration-200'
-                onClick={() => setisControlOpen(!isControlOpen)}
+                onClick={() => setIsControlOpen(!isControlOpen)}
               />            
             </li>
           </ul>
@@ -91,8 +91,15 @@ export default function Cabecalho() {
               <li>
                 <CircleUserRound
                   className='text-white ml-4 hover:text-[#bcc3cd] transition-colors duration-200'
+                  onClick={() => setIsControlOpen(!isControlOpen)}
                 />
               </li>
+              {
+                isControlOpen ?
+                  <AreaControle modoLista={true} />
+                :
+                <></>
+              }
               <li>
                 <button 
                   onClick={() => scrollToSection('inicio')}
@@ -122,11 +129,12 @@ export default function Cabecalho() {
         )}
       </header>
       {isControlOpen ?
-        <AreaControle />
+        <span className='collapse md:visible'>
+          <AreaControle modoLista={false} />
+        </span>        
       :
         <></>  
-      }
-      
+      }      
     </>
   )
 }

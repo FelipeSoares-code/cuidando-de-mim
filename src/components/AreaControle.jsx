@@ -1,10 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
+import styled from "styled-components"
 
-export default function AreaControle() {
-    const logado = false
+export default function AreaControle({modoLista}) {
+    const logado = true
     const nome = "Felipe"
 
-    return(
+    const classLi = "text-white flex items-center justify-center"
+
+    const central = (
         <div className="fixed flex flex-col bg-white z-50 top-17 right-9">
             {logado ?
                 <>
@@ -18,4 +21,21 @@ export default function AreaControle() {
             
         </div>
     )
+
+    const lista = (
+        <>
+        {logado ? 
+            <>
+            <li className={classLi}>Atendimentos</li>
+            <li className={classLi}>Sair</li>     
+            </>
+        :
+            <>
+            <li className={classLi}>Fazer Login</li>
+            </>
+        }            
+        </>
+    )
+
+    return <>{modoLista ? lista : central}</>
 }
