@@ -30,7 +30,7 @@ export default function Cabecalho() {
       <header className="bg-[var(--color-azul-padrao)] sticky top-0 z-50 px-4 md:px-8">
         <nav className="flex items-center justify-between py-3">
           {/* Logo e Nome */}
-        <a href="/" className="flex items-center">
+          <a href="/" className="flex items-center">
               <img 
                 src={logoSite} 
                 alt="Logo Cuidando de Mim" 
@@ -68,10 +68,12 @@ export default function Cabecalho() {
               </button>
             </li>
             <li>
-              <CircleUserRound
-                className='text-white hover:text-[#bcc3cd] transition-colors duration-200'
-                onClick={() => setIsControlOpen(!isControlOpen)}
-              />            
+              <button type="button">
+                <CircleUserRound
+                  className='text-white hover:text-[#bcc3cd] transition-colors duration-200'
+                  onClick={() => setIsControlOpen(!isControlOpen)}
+                />  
+              </button>          
             </li>
           </ul>
 
