@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"
+import { Link } from "react-router-dom";
 
 const Erro404 = () => (
     <div style={{
@@ -15,7 +16,7 @@ const Erro404 = () => (
         <p>
             Desculpe, a página que você está procurando não existe.
         </p>
-        <a
+        <Link
             href="/"
             style={{
                 marginTop: "2rem",
@@ -28,7 +29,7 @@ const Erro404 = () => (
             }}
         >
             Voltar para a página inicial
-        </a>
+        </Link>
     </div>
 );
 

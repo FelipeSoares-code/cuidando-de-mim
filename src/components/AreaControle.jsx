@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 export default function AreaControle({modoLista}) {
     const [logado, setLogado] = useState(true)
@@ -27,7 +27,7 @@ export default function AreaControle({modoLista}) {
                     </button>
                 </>
             :
-                <a href="/login" className={`${classButton}`}>Fazer Login</a>
+                <Link to="/login" className={`${classButton}`}>Fazer Login</Link>
             }
             
         </div>
@@ -42,7 +42,7 @@ export default function AreaControle({modoLista}) {
             </>
         :
             <>
-            <li className={classLi}><a href="/login">Fazer Login</a></li>
+            <li className={classLi}><Link to="/login">Fazer Login</Link></li>
             </>
         }            
         </>

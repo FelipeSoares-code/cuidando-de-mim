@@ -2,10 +2,15 @@ import { useState } from 'react'
 import { Menu, X, CircleUserRound } from 'lucide-react'
 import logoSite from '../assets/imagens/logo-site.png'
 import AreaControle from './AreaControle'
+import { Link, useNavigate } from 'react-router-dom'
+import { useApp } from '@/AppContext'
 
 export default function Cabecalho() {
+  const { linkDoctoralia } = useApp()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isControlOpen, setIsControlOpen] = useState(false)
+
+  const navigate = useNavigate()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -15,7 +20,7 @@ export default function Cabecalho() {
     const path = window.location.pathname
     if (path !== '/') {
       // veriicar se na produção a tela desse até o id
-      window.location.href = `/#${sectionId}`
+      navigate(`/#${sectionId}`)
       return
     }
     const element = document.getElementById(sectionId)
@@ -30,7 +35,7 @@ export default function Cabecalho() {
       <header className="bg-[var(--color-azul-padrao)] sticky top-0 z-50 px-4 md:px-8">
         <nav className="flex items-center justify-between py-3">
           {/* Logo e Nome */}
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
               <img 
                 src={logoSite} 
                 alt="Logo Cuidando de Mim" 
@@ -39,16 +44,15 @@ export default function Cabecalho() {
               <span className="ml-3 text-[#bcc3cd] text-2xl md:text-4xl font-bold font-dancing-script">
                 Clínica Cuidando de Mim
               </span>
-          </a>
+          </Link>
 
           {/* Menu Desktop */}
           <ul className="hidden md:flex space-x-8">
             <li>
               <button 
-                onClick={() => scrollToSection('inicio')}
                 className="text-white hover:text-[#bcc3cd] transition-colors duration-200 font-medium"
               >
-                Início
+                <Link to={linkDoctoralia}>Agendar Consulta</Link>
               </button>
             </li>
             <li>
@@ -67,14 +71,14 @@ export default function Cabecalho() {
                 Localização
               </button>
             </li>
-            <li>
+            {/*<li>
               <button type="button">
                 <CircleUserRound
                   className='text-white hover:text-[#bcc3cd] transition-colors duration-200'
                   onClick={() => setIsControlOpen(!isControlOpen)}
                 />  
               </button>          
-            </li>
+            </li> */}
           </ul>
 
           {/* Botão Menu Mobile */}

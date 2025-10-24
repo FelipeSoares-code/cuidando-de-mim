@@ -6,8 +6,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/bundle';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
+import { useApp } from '@/AppContext';
 
 const Reviews = () => {
+  const { linkDoctoralia } = useApp()
+
   const reviews = [
     {
       text: "Rita é uma profissional incrível! Acolhedora, humanizada, sábia e muito competente. Tem me ajudado muito no meu processo terapêutico. Obrigada pelo profissionalismo e pela escuta acolhedora. Recomendo demais!",
@@ -104,7 +107,7 @@ const Reviews = () => {
       <p className="mt-12 text-center text-lg">
         Veja essas e mais avaliações no site{' '}
         <a 
-          href="https://www.doctoralia.com.br/rita-soares/psicologo/sao-bernardo-do-campo"
+          href={linkDoctoralia}
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 hover:text-blue-800 transition-colors duration-200"

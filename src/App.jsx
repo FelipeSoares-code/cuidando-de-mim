@@ -6,25 +6,29 @@ import Erro404 from './telas/Erro404'
 import Rodape from './components/Rodape'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import Login from './telas/Login'
+import { AppProvider } from './AppContext'
 
 function App() {
+  const linkDoctoralia = "https://www.doctoralia.com.br/rita-soares/psicologo/sao-bernardo-do-campo"
   return (
+    <AppProvider>
     <div className="min-h-screen">
-      <Cabecalho />
+      <Router>
+        <Cabecalho />
       
-      <main className="min-h-screen">
-        <Router>
+        <main className="min-h-screen">        
           <Routes>
             <Route path='/' element={<Principal />} />
             <Route path='*' element={<Erro404 />} />
             <Route path='/cadastro' element={<Cadastro />} />
             <Route path='/login' element={<Login />} />
-          </Routes>
-        </Router>
-      </main>
+          </Routes>        
+        </main>
       
-      <Rodape />
+        <Rodape />
+      </Router>
     </div>
+    </AppProvider>
   )
 }
 

@@ -1,5 +1,6 @@
 import { Mail } from 'lucide-react'
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const contactItems = [
@@ -35,10 +36,10 @@ const Contact = () => {
             const IconComponent = item.icon;
             return (
               <div key={index} className="flex items-center">
-                <a href={item.href} target='_blank' rel='noopener'>
+                <Link to={item.href} target='_blank' rel='noopener'>
                   <IconComponent className="w-8 h-8 text-[#6666b1] mr-4" />
-                </a>
-                <a
+                </Link>
+                <Link
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -46,7 +47,7 @@ const Contact = () => {
                   aria-label={item.label}
                 >
                   {item.text}
-                </a>
+                </Link>
               </div>
             );
           })}

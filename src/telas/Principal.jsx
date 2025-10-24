@@ -3,7 +3,7 @@ import Sobre from '../components/Sobre'
 import Avaliacoes from '../components/Avaliacoes'
 import Localizacao from '../components/Localizacao'
 import Contato from '../components/Contato'
-
+import React from "react"
 
 export default function Principal(){
     
