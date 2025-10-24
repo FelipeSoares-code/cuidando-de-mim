@@ -17,7 +17,7 @@ const Erro404 = () => (
             Desculpe, a página que você está procurando não existe.
         </p>
         <Link
-            href="/"
+            to="/"
             style={{
                 marginTop: "2rem",
                 padding: "0.75rem 2rem",

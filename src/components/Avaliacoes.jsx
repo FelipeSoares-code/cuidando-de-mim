@@ -7,6 +7,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/bundle';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
 import { useApp } from '@/AppContext';
+import { Link } from 'react-router-dom';
+import Botao from './ui/Botao';
 
 const Reviews = () => {
   const { linkDoctoralia } = useApp()
@@ -97,24 +99,18 @@ const Reviews = () => {
         ))}
         {/* Botões de navegação */}
         <div className="swiper-button-prev collapse md:visible absolute left-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-white/80 hover:bg-white p-2 rounded-full shadow-md">
-          <ChevronLeft />
+          <button type='button'><ChevronLeft /></button>
         </div>
         <div className="swiper-button-next collapse md:visible absolute right-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-white/80 hover:bg-white p-2 rounded-full shadow-md">
-          <ChevronRight />
+          <button type="button"><ChevronRight /></button> 
         </div>
       </Swiper>
       
-      <p className="mt-12 text-center text-lg">
-        Veja essas e mais avaliações no site{' '}
-        <a 
-          href={linkDoctoralia}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:text-blue-800 transition-colors duration-200"
-        >
-          doctoralia.com.br
-        </a>
-      </p>
+      <div className='flex flex-row justify-center items-center mt-8'>
+        <Link to={linkDoctoralia}>
+          <Botao texto="Veja mais avaliações" />
+        </Link>        
+      </div>
     </section>
   );
 };

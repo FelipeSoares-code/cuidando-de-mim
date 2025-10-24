@@ -2,9 +2,13 @@ import clinica4 from '../assets/imagens/foto-clinica4.jpeg';
 import rita from '../assets/imagens/foto-rita-2.1.jpg';
 import Card from './ui/Card';
 import { GraduationCap, Brain, Sparkles, User } from 'lucide-react';
+import Botao from './ui/Botao';
+import { useApp } from '@/AppContext';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const aboutStyle = { fontFamily: "'Inter', Arial, Helvetica, sans-serif" }
+  const { linkDoctoralia } = useApp()
 
   return (
     <section id='Sobre' className="container mx-auto px-4 mt-24 font-serif" style={aboutStyle}>
@@ -108,8 +112,13 @@ const About = () => {
               alt="Rita Soares - Psicóloga" 
               className="w-full rounded-lg shadow-lg md:mt-0"
             />
-          </div>
+          </div>          
         </div>
+        <div className='pt-9'>
+          <Link to={linkDoctoralia}>
+            <Botao texto="Agendar Consulta" />
+          </Link>
+        </div>    
       </div>
     </section>
   );

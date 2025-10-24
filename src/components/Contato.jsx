@@ -40,7 +40,7 @@ const Contact = () => {
                   <IconComponent className="w-8 h-8 text-[#6666b1] mr-4" />
                 </Link>
                 <Link
-                  href={item.href}
+                  to={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg font-oswald text-black hover:text-[#6666b1] transition-colors duration-200 no-underline"
