@@ -2,10 +2,12 @@ import Botao from "@/components/ui/Botao"
 import { Eye, EyeOff } from "lucide-react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { useApp } from "@/AppContext"
 
 export default function Login() {
     const estiloInput = "h-11 p-3 w-[90%] lg:w-2/4"
 
+    const { pathPadrao } = useApp()
     const [mostrarSenha, setMostarSenha] = useState(false)
 
     return (
@@ -28,7 +30,7 @@ export default function Login() {
             </div>
 
             <Link 
-                to="/cadastro"
+                to={pathPadrao + "cadastro"}
                 className="text-blue-500 underline hover:text-blue-300 transition-colors duration-200"
             >
                 Ainda não possuo conta

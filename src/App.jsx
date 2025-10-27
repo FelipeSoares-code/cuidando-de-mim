@@ -9,7 +9,7 @@ import Login from './telas/Login'
 import { AppProvider } from './AppContext'
 
 function App() {
-  const linkDoctoralia = "https://www.doctoralia.com.br/rita-soares/psicologo/sao-bernardo-do-campo"
+  const pathPadrao = "/cuidando-de-mim/"
   return (
     <AppProvider>
     <div className="min-h-screen">
@@ -18,10 +18,10 @@ function App() {
       
         <main className="min-h-screen">        
           <Routes>
-            <Route path='/' element={<Principal />} />
+            <Route path={pathPadrao} element={<Principal />} />
             <Route path='*' element={<Erro404 />} />
-            <Route path='/cadastro' element={<Cadastro />} />
-            <Route path='/login' element={<Login />} />
+            <Route path={pathPadrao + 'cadastro'} element={<Cadastro />} />
+            <Route path={pathPadrao + 'login'} element={<Login />} />
           </Routes>        
         </main>
       

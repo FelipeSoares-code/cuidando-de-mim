@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useApp } from '@/AppContext'
 
 export default function Cabecalho() {
-  const { linkDoctoralia } = useApp()
+  const { linkDoctoralia, pathPadrao } = useApp()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isControlOpen, setIsControlOpen] = useState(false)
 
@@ -18,9 +18,9 @@ export default function Cabecalho() {
 
   const scrollToSection = (sectionId) => {
     const path = window.location.pathname
-    if (path !== '/') {
+    if (path !== pathPadrao) {
       // veriicar se na produção a tela desse até o id
-      navigate(`/#${sectionId}`)
+      navigate(`${pathPadrao}#${sectionId}`)
       return
     }
     const element = document.getElementById(sectionId)
@@ -35,7 +35,7 @@ export default function Cabecalho() {
       <header className="bg-[var(--color-azul-padrao)] sticky top-0 z-50 px-4 md:px-8">
         <nav className="flex items-center justify-between py-3">
           {/* Logo e Nome */}
-          <Link to="/" className="flex items-center">
+          <Link to={"pathPadrao"} className="flex items-center">
               <img 
                 src={logoSite} 
                 alt="Logo Cuidando de Mim" 
