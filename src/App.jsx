@@ -7,11 +7,20 @@ import Rodape from './components/Rodape'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import Login from './telas/Login'
 import { AppProvider } from './AppContext'
+import { useApp } from './AppContext'
 
 function App() {
-  const pathPadrao = "/cuidando-de-mim/"
   return (
     <AppProvider>
+      <InnerApp />
+    </AppProvider>
+  )
+}
+
+function InnerApp() {
+  const { pathPadrao } = useApp()
+
+  return (
     <div className="min-h-screen">
       <Router>
         <Cabecalho />
@@ -28,7 +37,6 @@ function App() {
         <Rodape />
       </Router>
     </div>
-    </AppProvider>
   )
 }
 

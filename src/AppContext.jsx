@@ -14,7 +14,7 @@ export function AppProvider({ children }) {
             pathPadrao, setPathPadrao
           }}
         >
-        {children}
+          {children}
         </AppContext.Provider>
     );
 }

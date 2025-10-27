@@ -8,7 +8,7 @@ import { useApp } from '@/AppContext'
 export default function Cabecalho() {
   const { linkDoctoralia, pathPadrao } = useApp()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isControlOpen, setIsControlOpen] = useState(false)
+  // const [isControlOpen, setIsControlOpen] = useState(false)
 
   const navigate = useNavigate()
 
@@ -35,7 +35,7 @@ export default function Cabecalho() {
       <header className="bg-[var(--color-azul-padrao)] sticky top-0 z-50 px-4 md:px-8">
         <nav className="flex items-center justify-between py-3">
           {/* Logo e Nome */}
-          <Link to={"pathPadrao"} className="flex items-center">
+          <Link to={pathPadrao} className="flex items-center">
               <img 
                 src={logoSite} 
                 alt="Logo Cuidando de Mim" 
@@ -94,7 +94,7 @@ export default function Cabecalho() {
         {isMenuOpen && (
           <div className="md:hidden bg-[#2c6e9a] pb-4">
             <ul className="space-y-2">
-              {/*<li>
+              {/*(<li>
                 <CircleUserRound
                   className='text-white ml-4 hover:text-[#bcc3cd] transition-colors duration-200'
                   onClick={() => setIsControlOpen(!isControlOpen)}
@@ -105,7 +105,7 @@ export default function Cabecalho() {
                   <AreaControle modoLista={true} />
                 :
                 <></>
-              } */}
+              } )*/}
               <li>
                 <button 
                   onClick={() => scrollToSection('inicio')}
@@ -134,13 +134,13 @@ export default function Cabecalho() {
           </div>
         )}
       </header>
-      {isControlOpen ?
+      {/* {isControlOpen ?
         <span className='collapse md:visible'>
           <AreaControle modoLista={false} />
         </span>        
       :
         <></>  
-      }      
+      }*/}
     </>
   )
 }
