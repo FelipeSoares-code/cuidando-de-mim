@@ -5,7 +5,7 @@ const AppContext = createContext();
 export function AppProvider({ children }) {
   const [linkDoctoralia, setLinkDoctoralia] = useState("https://www.doctoralia.com.br/rita-soares/psicologo/sao-bernardo-do-campo")
 
-  const [pathPadrao, setPathPadrao] = useState("/cuidando-de-mim/")
+  const [pathPadrao, setPathPadrao] = useState("/")
 
   return (
     <AppContext.Provider 
