@@ -41,7 +41,7 @@ export default function Cabecalho() {
                 alt="Logo Cuidando de Mim" 
                 className="w-12 h-12 md:w-15 md:h-15"
               />
-              <span className="ml-3 text-[#bcc3cd] text-2xl md:text-4xl font-bold font-dancing-script">
+              <span className="ml-3 text-[var(--color-cinza-padrao)] text-2xl md:text-4xl font-bold font-dancing-script">
                 Clínica Cuidando de Mim
               </span>
           </Link>
@@ -50,7 +50,7 @@ export default function Cabecalho() {
           <ul className="hidden md:flex space-x-8">
             <li>
               <button 
-                className="text-white hover:text-[#bcc3cd] transition-colors duration-200 font-medium"
+                className="text-white hover:text-[var(--color-cinza-padrao)] transition-colors duration-200 font-medium"
               >
                 <Link to={linkDoctoralia}>Agendar Consulta</Link>
               </button>
@@ -58,7 +58,7 @@ export default function Cabecalho() {
             <li>
               <button 
                 onClick={() => scrollToSection('contato')}
-                className="text-white hover:text-[#bcc3cd] transition-colors duration-200 font-medium"
+                className="text-white hover:text-[var(--color-cinza-padrao)] transition-colors duration-200 font-medium"
               >
                 Contato
               </button>
@@ -66,7 +66,7 @@ export default function Cabecalho() {
             <li>
               <button 
                 onClick={() => scrollToSection('localizacao')}
-                className="text-white hover:text-[#bcc3cd] transition-colors duration-200 font-medium"
+                className="text-white hover:text-[var(--color-cinza-padrao)] transition-colors duration-200 font-medium"
               >
                 Localização
               </button>
@@ -74,7 +74,7 @@ export default function Cabecalho() {
             {/*<li>
               <button type="button">
                 <CircleUserRound
-                  className='text-white hover:text-[#bcc3cd] transition-colors duration-200'
+                  className='text-white hover:text-[var(--color-cinza-padrao)] transition-colors duration-200'
                   onClick={() => setIsControlOpen(!isControlOpen)}
                 />  
               </button>          
@@ -96,7 +96,7 @@ export default function Cabecalho() {
             <ul className="space-y-2">
               {/*(<li>
                 <CircleUserRound
-                  className='text-white ml-4 hover:text-[#bcc3cd] transition-colors duration-200'
+                  className='text-white ml-4 hover:text-[var(--color-cinza-padrao)] transition-colors duration-200'
                   onClick={() => setIsControlOpen(!isControlOpen)}
                 />
               </li>

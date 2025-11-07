@@ -26,8 +26,8 @@ const About = () => {
         </h1>
         <p className="text-lg text-justify leading-relaxed max-w-none lg:mr-[40%]">
           A Clínica Cuidando de Mim é um espaço dedicado ao bem-estar emocional e saúde mental, 
-          fundado pela psicóloga Rita Soares. Minha missão é oferecer suporte psicológico de forma 
-          acolhedora e personalizada, ajudando cada pessoa a encontrar saúde mental e autoconhecimento. 
+          fundado pela psicóloga Rita Soares, cuja missão é oferecer suporte psicológico de forma 
+          acolhedora e personalizada, ajudando cada pessoa a alcançar saúde mental e autoconhecimento. 
           Cuidar de si é o primeiro passo para uma vida mais plena, significativa e feliz. Venha, 
           vamos caminhar juntos nessa jornada de cuidado e transformação!
         </p>
@@ -48,12 +48,12 @@ const About = () => {
               Como cuidar de você?
             </h1>
             <p className="text-lg text-justify leading-relaxed">
-              Utilizo a Terapia Cognitiva Comportamental (TCC) para ajudar você a conhecer, 
+              <i>"</i>Utilizo a Terapia Cognitiva Comportamental (TCC) para ajudar você a conhecer, 
               compreender e modificar padrões de pensamentos, sentimentos e comportamentos que 
               podem ser a causa de sofrimentos. Atendo pessoas a partir de 14 anos, oferecendo 
               um espaço seguro e acolhedor para explorar desafios emocionais, melhorar a autoestima 
-              e desenvolver estratégias práticas para lidar com transtornos e dificuldades do dia a dia. 
-              Juntos, vamos construir um caminho de autoconhecimento, crescimento pessoal e promoção a saúde.
+              e desenvolver estratégias práticas para lidar com transtornos e dificuldades enfrentadas. 
+              Juntos, vamos construir um caminho de autoconhecimento, crescimento pessoal e promoção a saúde.<i>"</i> 
             </p>
           </div>
         </div>

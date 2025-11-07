@@ -1,6 +1,11 @@
 import { MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Location = () => {
+  const linkMaps = (
+    "https://maps.app.goo.gl/SiBAD6rb1K9KVFPP8"
+  )
+
   return (
     <section id="localizacao" className="bg-gray-100 py-12 px-4 md:px-8">
       <div className="container mx-auto">
@@ -8,12 +13,12 @@ const Location = () => {
           Localização
         </h2>
         
-        <div className="flex items-center mb-8">
+        <Link to={linkMaps} className='flex items-center mb-8' target='_blank' rel='noopener noreferrer'>
           <MapPin className="w-8 h-8 text-[#6666b1] mr-3" />
-          <p className="text-lg">
+          <p className="text-lg hover:text-[#6666b1] transition-colors duration-200 text-lg">
             Rua José Versolato 111B, sala 704, Centro, São Bernardo do Campo
           </p>
-        </div>
+        </Link>
         
         <div className="flex justify-center">
           <iframe 
@@ -24,7 +29,7 @@ const Location = () => {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
           />
         </div>
       </div>
